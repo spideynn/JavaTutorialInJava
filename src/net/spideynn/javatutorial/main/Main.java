@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import net.spideynn.javatutorial.tutorials.partone.Part1;
 
 /**
  * Main class for launching the application
@@ -25,23 +26,25 @@ import java.io.IOException;
  */
 public class Main {
 
-     private void setupMainWindow() {
-        JFrame frame = new JFrame("Java Tutorial in Java");
-       // frame.
-        frame.addWindowListener(new WindowAdapter() {
+    private JButton button1;
+
+    private static void setupMainWindow() {
+         JFrame frame = new JFrame("Java Tutorial in Java");
+         JButton button1 = new JButton("Tutorials");
+         JButton button2 = new JButton("Java Editor");
+         JButton button3 = new JButton("Preferences");
+         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 try {SaveData.savedata("Test");}
-                catch(IOException ex) {
-                    
-                }
+                catch(IOException ex) {}
             }
         });
 
-
+    frame.show();
      }
 
     public static void main(String[] args) {
-
+        setupMainWindow();
     }
 
 
