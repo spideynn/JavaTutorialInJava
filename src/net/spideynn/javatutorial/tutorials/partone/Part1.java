@@ -2,7 +2,8 @@ package net.spideynn.javatutorial.tutorials.partone;
 
 import javax.swing.*;
 
-/**
+/** Part 1 of the tutorials.
+ *
  * Copyright (C) 2014  Spideynn
  * <p/>
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +20,7 @@ import javax.swing.*;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class Part1 {
-    public void setupTutorialScreen() {
+    public void setupTutorialScreen() { //TODO: Start on the tutorials.
         JFrame frame = new JFrame("Java Tutorial - Part 1");
     }
 

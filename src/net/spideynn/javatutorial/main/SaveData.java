@@ -23,7 +23,7 @@ import java.io.IOException;
  */
 public class SaveData {
 
-    public static synchronized void savedata(String data) throws IOException {
+    public static synchronized void savedata(String[] data) throws IOException {
         String savedir = System.getProperty("user.home") + "/.javatutorial/savedata";
         BufferedWriter out = new BufferedWriter(new FileWriter(savedir), 32768);
         out.close();

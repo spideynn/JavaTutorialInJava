@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import net.spideynn.javatutorial.tutorials.partone.Part1;
 
 /**
  * Main class for launching the application
@@ -26,24 +25,45 @@ import net.spideynn.javatutorial.tutorials.partone.Part1;
  */
 public class Main {
 
-    private JButton button1;
+    public static String[] progress;
+    public static Logger log;
 
     private static void setupMainWindow() {
-         JFrame frame = new JFrame("Java Tutorial in Java");
-         JButton button1 = new JButton("Tutorials");
-         JButton button2 = new JButton("Java Editor");
-         JButton button3 = new JButton("Preferences");
-         frame.addWindowListener(new WindowAdapter() {
+        //TODO: Create Debug Start Timer.
+        JFrame frame = new JFrame("Java Tutorial in Java");
+        log.fine("Created JFrame");
+        frame.setSize(512, 512);
+        JButton button1 = new JButton("Tutorials");
+        JButton button2 = new JButton("Java Editor");
+        JButton button3 = new JButton("Preferences");
+        log.fine("Created Main Menu Buttons");
+        button1.setSize(32, 16);
+        button2.setSize(16, 32);
+        button3.setSize(32, 16);
+        log.fine("Set Button Sizes");
+        frame.add(button1).setLocation(128, 512);
+        frame.add(button2).setLocation(256, 256);
+        frame.add(button3).setLocation(512, 128);
+        log.fine("Set Button Location");
+
+
+        frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
-                try {SaveData.savedata("Test");}
-                catch(IOException ex) {}
+                try {
+                    SaveData.savedata(progress);
+                } catch (IOException ex) {
+                }
             }
         });
 
-    frame.show();
+        frame.show();
+        log.fine("Showing JFrame.");
      }
 
     public static void main(String[] args) {
+        if (args.equals("debug")) {
+            Logger.finelogging = true;
+        }
         setupMainWindow();
     }
 

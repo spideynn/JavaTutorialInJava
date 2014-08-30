@@ -22,7 +22,9 @@ import java.awt.*;
  */
 public class Logger {
 
-    public synchronized void setupCrashWindow(Exception ex) {
+    public static boolean finelogging = false;
+
+    public static synchronized void setupCrashWindow(Exception ex) {
         JFrame frame = new JFrame("Application Crash Detected.");
         JLabel label1 = new JLabel("StackTrace not available.");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,22 +32,26 @@ public class Logger {
         frame.pack();
         frame.setVisible(true);
     }
-
-    public void info(String text) {
+    public static void fine(String text) {
+        if (finelogging = true) {
+            System.out.println("[DEBUG] " + text);
+        }
+    }
+    public static void info(String text) {
         System.out.println("[INFO] " + text);
     }
 
-    public void warning(String text) {
+    public static void warning(String text) {
         System.out.println("[WARNING] " + text);
     }
 
-    public void error(String text, Exception ex) {
+    public static void error(String text, Exception ex) {
         System.out.println("[ERROR] " + text);
         System.out.println("[ERROR] The stacktrace is:");
         System.out.println(ex);
     }
 
-    public synchronized void crash(Exception ex) {
+    public static synchronized void crash(Exception ex) {
         setupCrashWindow(ex);
         System.out.println("The application has crashed!");
 
