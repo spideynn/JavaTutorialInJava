@@ -1,14 +1,11 @@
 package net.spideynn.javatutorial.main;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Main class for launching the application
- * <p/>
- * Copyright (C) 2014 Spideynn
+ * Copyright (C) 2014  Spideynn
  * <p/>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,24 +20,23 @@ import java.awt.event.WindowEvent;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class Main extends JFrame {
-
-    public static String[] progress;
-    public static Logger log;
-    private JPanel rootPanel;
+public class MainMenu extends JFrame {
     private JButton tutorialsButton;
     private JButton javaEditorButton;
-    private JButton exitButton;
     private JButton optionsButton;
-    private JButton tutorials;
-    private JButton quit;
-    private JButton javaedit;
+    private JButton quitButton;
 
 
-    public static void main(String[] args) {
-        if (args.equals("debug")) {
-            Logger.finelogging = true;
-        }
-        Main main = new Main();
+    public MainMenu() {
+        super("Java Tutorial");
+        pack();
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setVisible(true);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                //TODO Setup save system to save progress. (see OWNER API)
+            }
+        });
     }
 }
