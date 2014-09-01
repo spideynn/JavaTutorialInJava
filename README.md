@@ -1,4 +1,5 @@
 JavaTutorialInJava
 ==================
 
-A Java Tutorial application written in Java.
+Want to learn Java? Then this application is for you!
+Its a Java tutorial... written in Java!
