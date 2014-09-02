@@ -1,10 +1,5 @@
 package net.spideynn.javatutorial.main;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
 /**
  * Main class for launching the application
  * <p/>
@@ -23,24 +18,14 @@ import java.awt.event.WindowEvent;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class Main extends JFrame {
+public class Main {
 
     public static String[] progress;
-    public static Logger log;
-    private JPanel rootPanel;
-    private JButton tutorialsButton;
-    private JButton javaEditorButton;
-    private JButton exitButton;
-    private JButton optionsButton;
-    private JButton tutorials;
-    private JButton quit;
-    private JButton javaedit;
-
+    public static Log log;
 
     public static void main(String[] args) {
         if (args.equals("debug")) {
-            Logger.finelogging = true;
+            Log.finelogging = true;
         }
-        Main main = new Main();
     }
 }

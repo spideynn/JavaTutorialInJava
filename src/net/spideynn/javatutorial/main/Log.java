@@ -20,7 +20,7 @@ import java.awt.*;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class Logger {
+public class Log {
 
     public static boolean finelogging = false;
 
