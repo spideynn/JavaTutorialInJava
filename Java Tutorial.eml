@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/Java Tutorial"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="owner-1.0.5.1.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/libs/owner-1.0.5.1-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/libs/owner-1.0.5.1-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/owner-1.0.5.1.jar!/"/>
+	</lib>
+</component>
