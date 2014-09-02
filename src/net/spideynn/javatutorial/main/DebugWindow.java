@@ -1,15 +1,15 @@
 package net.spideynn.javatutorial.main;
 
 import java.util.logging.*;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 
 class LogWindow extends JFrame {
-    private int width;
-
-    private int height;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5336146402893413927L;
 
     private JTextArea textArea = null;
 

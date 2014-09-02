@@ -1,6 +1,9 @@
 package net.spideynn.javatutorial.main;
 
 import javax.swing.*;
+
+import org.aeonbits.owner.ConfigFactory;
+
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -21,10 +24,15 @@ import java.awt.event.WindowEvent;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class MainMenu extends JFrame {
-    private JButton tutorialsButton;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2062146762993313927L;
+	private JButton tutorialsButton;
     private JButton javaEditorButton;
     private JButton optionsButton;
     private JButton quitButton;
+    static Save save;
 
 
     public MainMenu() {
@@ -36,6 +44,7 @@ public class MainMenu extends JFrame {
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 //TODO Setup save system to save progress. (see OWNER API)
+            	//save.timesLaunched() + 1;
             }
         });
     }

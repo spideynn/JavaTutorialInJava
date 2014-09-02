@@ -24,7 +24,7 @@ public class Log {
 
     public static boolean finelogging = false;
 
-    public static synchronized void setupCrashWindow(Exception ex) {
+    public synchronized static void setupCrashWindow(Exception ex) {
         JFrame frame = new JFrame("Application Crash Detected.");
         JLabel label1 = new JLabel("StackTrace not available.");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,20 +32,20 @@ public class Log {
         frame.pack();
         frame.setVisible(true);
     }
-    public static void fine(String text) {
+    public void fine(Object text) {
         if (finelogging = true) {
             System.out.println("[DEBUG] " + text);
         }
     }
-    public static void info(String text) {
+    public void info(Object text) {
         System.out.println("[INFO] " + text);
     }
 
-    public static void warning(String text) {
+    public void warning(Object text) {
         System.out.println("[WARNING] " + text);
     }
 
-    public static void error(String text, Exception ex) {
+    public static void error(Object text, Exception ex) {
         System.out.println("[ERROR] " + text);
         System.out.println("[ERROR] The stacktrace is:");
         System.out.println(ex);

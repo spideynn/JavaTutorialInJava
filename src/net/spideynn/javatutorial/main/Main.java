@@ -1,5 +1,7 @@
 package net.spideynn.javatutorial.main;
 
+import org.aeonbits.owner.ConfigFactory;
+
 /**
  * Main class for launching the application
  * <p/>
@@ -22,10 +24,15 @@ public class Main {
 
     public static String[] progress;
     public static Log log;
+    static Save save = ConfigFactory.create(Save.class);
 
     public static void main(String[] args) {
         if (args.equals("debug")) {
             Log.finelogging = true;
         }
+        log.info("" + save.version());
     }
+    
+    			
+
 }

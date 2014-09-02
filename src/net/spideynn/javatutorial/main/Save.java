@@ -1,8 +1,7 @@
 package net.spideynn.javatutorial.main;
 
 import org.aeonbits.owner.Config;
-
-import org.aeonbits.owner.Config.DefaultValue;
+import org.aeonbits.owner.Config.Sources;
 
 /**
  * Copyright (C) 2014  Spideynn
@@ -22,18 +21,18 @@ import org.aeonbits.owner.Config.DefaultValue;
  */
 
 
-@Config.Sources({"file:${user.home}/.javatutorial.config"})
+@Sources({"file:~/.javatutorial/javatutorial.cfg"})
 public interface Save extends Config {
 
-    @DefaultValue("**DO NOT CHANGE THE VERSION NUMBER!**")
+    @DefaultValue("**DO NOT CHANGE THE VERSION NUMBER! IT COULD CAUSE INCOMPATABILITY ISSUES WITH NEWER VERSIONS!**")
     String warning();
 
     @DefaultValue("0.0.1")
-    int version();
-
-    @DefaultValue("true")
-    boolean metrics();
-
+    String version();
+    
+    @DefaultValue("0")
+    int timesLaunched();
+    
     @DefaultValue("false")
     boolean part1();
 
