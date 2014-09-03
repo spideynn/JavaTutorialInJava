@@ -30,6 +30,7 @@ public class Main {
         if (args.equals("debug")) {
             Log.finelogging = true;
         }
+        MainMenu main = new MainMenu();
         log.info("" + save.version());
     }
     
