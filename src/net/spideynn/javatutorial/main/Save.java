@@ -2,6 +2,7 @@ package net.spideynn.javatutorial.main;
 
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.Sources;
+import org.aeonbits.owner.Mutable;
 
 /**
  * Copyright (C) 2014  Spideynn
@@ -22,7 +23,7 @@ import org.aeonbits.owner.Config.Sources;
 
 
 @Sources({"file:~/.javatutorial/javatutorial.cfg"})
-public interface Save extends Config {
+public interface Save extends Config, Mutable {
 
     @DefaultValue("**DO NOT CHANGE THE VERSION NUMBER! IT COULD CAUSE INCOMPATABILITY ISSUES WITH NEWER VERSIONS!**")
     String warning();
